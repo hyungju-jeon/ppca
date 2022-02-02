@@ -69,7 +69,6 @@ class PPCA(object):
 			W = ((y - mu).dot(EZ.T)).dot(inv(EZZ))
 			sigma = np.linalg.norm(y - mu) - 2*tr((EZ.T).dot(W.T).dot((y - mu))) + tr(EZZ.dot((W.T).dot(W)))
 			sigma = (1/(N*d))*sigma
-			sigma = np.absolute(sigma)
 		self.W = W
 		self.sigma = sigma
 
